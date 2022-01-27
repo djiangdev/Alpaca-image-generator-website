@@ -8,7 +8,7 @@ class App extends Component {
     super(props)
     this.state = {
       selected_style: {
-        accessories: 'none',
+        accessories: 'headphone',
         backgrounds: 'darkblue70',
         ears: 'default',
         eyes: 'default',

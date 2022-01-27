@@ -45,17 +45,14 @@ export class RenderAlpaca extends Component {
             className='eyes'
             alt='eyes'
           />
-
-          {design.accessories === 'none' ? null : (
-            <img
-              src={
-                process.env.PUBLIC_URL +
-                `/alpaca/accessories/${design.accessories}.png`
-              }
-              className='accessories'
-              alt='accessories'
-            />
-          )}
+          <img
+            src={
+              process.env.PUBLIC_URL +
+              `/alpaca/accessories/${design.accessories}.png`
+            }
+            className='accessories'
+            alt='accessories'
+          />
           <img
             src={process.env.PUBLIC_URL + `/alpaca/leg/${design.leg}.png`}
             className='leg'
