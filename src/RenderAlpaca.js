@@ -3,61 +3,20 @@ import './RenderAlpaca.css'
 
 export class RenderAlpaca extends Component {
   render () {
-    let design = this.props.design
+    let images = Object.entries(this.props.design).map((obj, index) => {
+      return (
+        <img
+          key={index}
+          src={process.env.PUBLIC_URL + `/alpaca/${obj[0]}/${obj[1]}.png`}
+          className={obj[0]}
+          alt={obj[0]}
+        />
+      )
+    })
     return (
       <div className='drawing'>
         <div id='alpaca' className='alpaca'>
-          <img
-            src={
-              process.env.PUBLIC_URL +
-              `/alpaca/backgrounds/${design.backgrounds}.png`
-            }
-            className='background'
-            alt='background'
-          />
-          <img
-            src={process.env.PUBLIC_URL + `/alpaca/nose.png`}
-            className='nose'
-            alt='nose'
-          />
-          <img
-            src={process.env.PUBLIC_URL + `/alpaca/neck/${design.neck}.png`}
-            className='neck'
-            alt='neck'
-          />
-          <img
-            src={process.env.PUBLIC_URL + `/alpaca/mouth/${design.mouth}.png`}
-            className='mouth'
-            alt='mouth'
-          />
-          <img
-            src={process.env.PUBLIC_URL + `/alpaca/ears/${design.ears}.png`}
-            className='ears'
-            alt='ears'
-          />
-          <img
-            src={process.env.PUBLIC_URL + `/alpaca/hair/${design.hair}.png`}
-            className='hair'
-            alt='hair'
-          />
-          <img
-            src={process.env.PUBLIC_URL + `/alpaca/eyes/${design.eyes}.png`}
-            className='eyes'
-            alt='eyes'
-          />
-          <img
-            src={
-              process.env.PUBLIC_URL +
-              `/alpaca/accessories/${design.accessories}.png`
-            }
-            className='accessories'
-            alt='accessories'
-          />
-          <img
-            src={process.env.PUBLIC_URL + `/alpaca/leg/${design.leg}.png`}
-            className='leg'
-            alt='leg'
-          />
+          {images}
         </div>
       </div>
     )
