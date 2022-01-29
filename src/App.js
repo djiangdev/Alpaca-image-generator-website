@@ -31,7 +31,7 @@ class App extends Component {
       ears: ['default', 'tilt-backward', 'tilt-forward'],
       eyes: ['default', 'angry', 'naughty', 'panda', 'smart', 'star'],
       hair: ['default', 'bang', 'curls', 'elegant', 'fancy', 'quiff', 'short'],
-      legss: [
+      leg: [
         'default',
         'bubble-tea',
         'cookie',
@@ -81,58 +81,9 @@ class App extends Component {
   }
 
   setStyle (option, value) {
-    switch (option) {
-      case 'accessories':
-        this.setState({
-          selected_style: { ...this.state.selected_style, accessories: value }
-        })
-        break
-
-      case 'backgrounds':
-        this.setState({
-          selected_style: { ...this.state.selected_style, backgrounds: value }
-        })
-        break
-
-      case 'ears':
-        this.setState({
-          selected_style: { ...this.state.selected_style, ears: value }
-        })
-        break
-
-      case 'eyes':
-        this.setState({
-          selected_style: { ...this.state.selected_style, eyes: value }
-        })
-        break
-
-      case 'hair':
-        this.setState({
-          selected_style: { ...this.state.selected_style, hair: value }
-        })
-        break
-
-      case 'leg':
-        this.setState({
-          selected_style: { ...this.state.selected_style, leg: value }
-        })
-        break
-
-      case 'mouth':
-        this.setState({
-          selected_style: { ...this.state.selected_style, mouth: value }
-        })
-        break
-
-      case 'neck':
-        this.setState({
-          selected_style: { ...this.state.selected_style, neck: value }
-        })
-        break
-
-      default:
-        break
-    }
+    this.setState({
+      selected_style: { ...this.state.selected_style, [option]: value }
+    })
   }
 
   random () {
