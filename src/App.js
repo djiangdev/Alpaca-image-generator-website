@@ -103,7 +103,6 @@ class App extends Component {
   }
 
   render () {
-    // options
     let accessories_options = Object.entries(this.props.options).map(
       (obj, index) => {
         return (
