@@ -78,10 +78,11 @@ class App extends Component {
 
   random () {
     let selected_styles = {}
-    Object.entries(this.props.options).map(obj => {
-      selected_styles[obj[0]] =
-        obj[1][Math.floor(Math.random() * obj[1].length)]
-    })
+    Object.entries(this.props.options).map(
+      obj =>
+        (selected_styles[obj[0]] =
+          obj[1][Math.floor(Math.random() * obj[1].length)])
+    )
     this.setState({
       selected_style: selected_styles
     })
