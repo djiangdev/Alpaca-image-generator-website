@@ -57,17 +57,7 @@ class App extends Component {
         leg: 'default',
         mouth: 'default',
         neck: 'default'
-      },
-      options: [
-        'accessories',
-        'backgrounds',
-        'ears',
-        'eyes',
-        'hair',
-        'leg',
-        'mouth',
-        'neck'
-      ]
+      }
     }
 
     this.random = this.random.bind(this)
@@ -87,33 +77,13 @@ class App extends Component {
   }
 
   random () {
+    let selected_styles = {}
+    Object.entries(this.props.options).map((obj, index) => {
+      selected_styles[obj[0]] =
+        obj[1][Math.floor(Math.random() * obj[1].length)]
+    })
     this.setState({
-      selected_style: {
-        accessories: this.props.options.accessories[
-          Math.floor(Math.random() * this.props.options.accessories.length)
-        ],
-        backgrounds: this.props.options.backgrounds[
-          Math.floor(Math.random() * this.props.options.backgrounds.length)
-        ],
-        ears: this.props.options.ears[
-          Math.floor(Math.random() * this.props.options.ears.length)
-        ],
-        eyes: this.props.options.eyes[
-          Math.floor(Math.random() * this.props.options.eyes.length)
-        ],
-        hair: this.props.options.hair[
-          Math.floor(Math.random() * this.props.options.hair.length)
-        ],
-        leg: this.props.options.leg[
-          Math.floor(Math.random() * this.props.options.leg.length)
-        ],
-        mouth: this.props.options.mouth[
-          Math.floor(Math.random() * this.props.options.mouth.length)
-        ],
-        neck: this.props.options.neck[
-          Math.floor(Math.random() * this.props.options.neck.length)
-        ]
-      }
+      selected_style: selected_styles
     })
   }
 
