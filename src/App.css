@@ -61,7 +61,6 @@
 .options {
   height: 100%;
   width: 55%;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -73,16 +72,14 @@
 }
 
 .AccessoriesOptions {
-  height: 50%;
-  height: 182px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 .Style {
-  min-height: 50%;
   height: fit-content;
   display: flex;
   flex-direction: row;

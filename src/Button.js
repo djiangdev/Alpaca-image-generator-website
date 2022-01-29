@@ -6,7 +6,14 @@ export class Button extends Component {
     super(props)
   }
   render () {
-    return <div>Button</div>
+    return (
+      <div
+        className={`Button ${this.props.selected && 'selected'}`}
+        onClick={() => this.props.update()}
+      >
+        {this.props.value}
+      </div>
+    )
   }
 }
 
