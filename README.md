@@ -1,1 +1,1 @@
-Live Demo <a href="https://inspiring-keller-fc87b6.netlify.app/" target="_blank">https://inspiring-keller-fc87b6.netlify.app/</a>
+Live Demo [https://inspiring-keller-fc87b6.netlify.app/](https://inspiring-keller-fc87b6.netlify.app/){:target="_blank"}.
