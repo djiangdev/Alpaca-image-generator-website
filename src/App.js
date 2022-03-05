@@ -4,6 +4,10 @@ import Button from './Button'
 import RenderAlpaca from './RenderAlpaca'
 let domToImage = require('dom-to-image-more')
 
+import Amplify from 'aws-amplify'
+import config from './aws-exports'
+Amplify.configure(config)
+
 class App extends Component {
   static defaultProps = {
     options: {
