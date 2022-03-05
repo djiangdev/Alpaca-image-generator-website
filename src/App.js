@@ -4,6 +4,7 @@ import Button from './Button'
 import RenderAlpaca from './RenderAlpaca'
 let domToImage = require('dom-to-image-more')
 
+
 class App extends Component {
   static defaultProps = {
     options: {
