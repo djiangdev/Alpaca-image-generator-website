@@ -148,7 +148,7 @@ class App extends Component {
           </div>
           <div className='options'>
             <div className='AccessoriesOptions'>
-              <div className='title'>Accessorize the Alpaca's</div>
+              <div className='title'>Accessories the Alpaca's</div>
               {accessories_options}
             </div>
             <div className='Style'>
