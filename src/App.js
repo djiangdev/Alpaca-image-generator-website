@@ -1,9 +1,5 @@
 import { API } from 'aws-amplify'
 import { listAlpacaAccessories } from './graphql/queries'
-import {
-  createAlpacaAccessories,
-  createAlpacaBackgrounds
-} from './graphql/mutations'
 
 import React, { useState, useEffect } from 'react'
 import './App.css'
