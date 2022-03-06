@@ -10,6 +10,11 @@
       "StackName": "amplify-amplifyd8f927a926f64-staging-135656",
       "StackId": "arn:aws:cloudformation:us-west-2:025340181271:stack/amplify-amplifyd8f927a926f64-staging-135656/1ed4f4b0-9c8c-11ec-8c5a-06d63c8054ed",
       "AmplifyAppId": "dmgkmkk742s2x"
+    },
+    "categories": {
+      "auth": {
+        "alpacaimagegeneratora837c62b": {}
+      }
     }
   }
 }

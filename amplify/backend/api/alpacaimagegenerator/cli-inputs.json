@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "alpacaimagegenerator",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "D:\\DevProjects\\MERN Developer\\Alpaca image generator website\\amplify\\backend\\api\\alpacaimagegenerator\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7,
+      "apiKeyExpirationDate": "2022-03-13T04:08:59.535Z",
+      "keyDescription": "desc"
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AMAZON_COGNITO_USER_POOLS",
+        "cognitoUserPoolId": "authalpacaimagegeneratora837c62b"
+      }
+    ]
+  }
+}
