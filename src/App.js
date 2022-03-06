@@ -1,6 +1,3 @@
-import { API } from 'aws-amplify'
-import { listAlpacaAccessories } from './graphql/queries'
-
 import React, { useState, useEffect } from 'react'
 import './App.css'
 import Button from './Button'
@@ -63,15 +60,6 @@ function App () {
   const [accessories, setAccessories] = useState([])
   const [optionData, setOption] = useState(initOptions)
   const [stateData, setState] = useState(initState)
-
-  useEffect(() => {
-    fetchAccessories()
-  }, [])
-
-  async function fetchAccessories () {
-    const apiData = await API.graphql({ query: listAlpacaAccessories })
-    setAccessories(apiData.data.listAlpacaAccessories.items)
-  }
 
   function setCurrentMenu (value) {
     setState({
